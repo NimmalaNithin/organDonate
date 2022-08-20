@@ -1,0 +1,52 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+
+        <form class="grid" action="/routing" method="POST">
+          <center>
+          <label for="locations">Choose a location:</label>
+          <select id="locs" name="locs">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+          <option value="F">F</option>
+          <option value="G">G</option>
+          <option value="H">H</option>
+          <option value="I">I</option>
+          <option value="J">J</option>
+          </select>
+          </center>
+          <center>
+          <label for="organs">Choose an organ:</label>
+          <select id="orgs" name="orgs">
+          <option value="Eyes">Eyes</option>
+          <option value="Kidney">Kidney</option>
+          <option value="Liver">Liver</option>
+          <option value="Heart">Heart</option>
+          <option value="Pancreas">Pancreas</option>
+          </select>
+          </center>
+
+          
+
+          <center><input class="file_submit" type="Submit"></center>
+
+          {% if path and dist %}
+          <center>
+            <h3 style="color: blue;">Nearest hospital is in <span style="color: red;">{{path}}</span></h3>
+            <h3 style="color: blue;">Distance is <span style="color: red">{{dist}}</span></h3>
+          </center> 
+          {% endif %}
+
+
+        </form>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
